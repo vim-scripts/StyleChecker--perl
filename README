@@ -1,0 +1,37 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=946
+
+"      Repetition of words is sign of bad style in most languages. This script
+"      will help to track repetition of words in LaTeX, HTML and mail files.
+"
+"      LaTeX: don't take into account \keywords
+"      HTML: don't highlight content of tags
+"      Mail: don't look in quoted messages, headers and signatures 
+"
+"      There is also support for any other filetype. StyleChecker will
+"      highlight there only repeated words in comments.
+"
+"      This script requires Perl interface. Theoretically it could be done in
+"      pure VimL but multiple iterations through long lists of words make it
+"      practically impossible - vote for arrays in VimL!
+"
+" Installation:
+"      Put this file into your .vim/macros directory and source it from local
+"      ftplugins. Of course you can place this file in .vim/plugin directory
+"      but this file will be sourced every time you open Vim.
+"
+" Usage:
+"      Default shorcut for style checking is ,, . You can change it by placing
+"      in .vimrc: 
+"            map <YourShortcut> <Plug>StyleChecker
+"
+"      After execution of map script will highlight repeated words.
+"      Next execution of map restore original highlighting of file.
+"      In console Vim offending words will be highlighted with 8 colors, in GUI
+"      with 16. 
+"      Thanks to Perl's pragma locale, language specific letters will be
+"      treated properly. 
+"
+" Settings:
+"      Behavior of StyleChecker you can control through variables. They are
+"      Vim variables, there is no need to play with Perl.
+" More about setting variables in file.
